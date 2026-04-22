@@ -99,7 +99,7 @@ class SampleRoadDetector(RoadDetector):
       return self
 
     if self._result is not None:
-      if self._agent_info.get_position_entity_id == self._result:
+      if self._agent_info.get_position_entity_id() == self._result:
         entity = self._world_info.get_entity(self._result)
         if isinstance(entity, Building):
           self._result = None
